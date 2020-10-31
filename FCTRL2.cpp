@@ -1,12 +1,11 @@
-// CPP program to find factorial of large
-// number using boost library.
+//solved by: Rakibur Rahman
+
 #include <bits/stdc++.h>
 #include <boost/multiprecision/cpp_int.hpp>
 using boost::multiprecision::cpp_int;
-//To handle large numbers up to 1024 bytes
 using namespace std;
 
-//cpp_int is data type here.
+
 cpp_int Factorial(int number)
 {
     cpp_int num = 1;
@@ -28,3 +27,19 @@ int main()
     }
     return 0;
 }
+
+/*
+    Explanation:
+
+    why   #include <boost/multiprecision/cpp_int.hpp>  ?
+    I use this header file because I have to use cpp_int throughout the program.
+    .hpp is a header file for only c++
+
+    why  using boost::multiprecision::cpp_int;  ?
+    I use this because I have to inform the compiler that i will use boost library.
+
+    why cpp_int ?
+    We can use any precision with the help of cpp_int data type
+    if we are not sure about how much precision is needed in future.
+    It automatically converts the desired precision at the Run-time.
+*/
